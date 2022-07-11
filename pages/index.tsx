@@ -1,7 +1,5 @@
 import { Card, CardMedia, Grid, CardActionArea, CardContent, Typography, CardActions, Button } from '@mui/material'
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
 import NextLink from 'next/link'
 import { Key, ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react'
 import Layout from '../components/Layout'
@@ -11,7 +9,8 @@ import styles from "../styles/Amazon.module.scss";
 const Home: NextPage = () => {
   return (
     <div>
-      <Layout title="Home" description="">
+      {/* <Layout title="Home" description=""> */}
+      <Layout>
         <div className={styles.product_container}>
           <Grid container spacing={3} className={styles.container}>
             {products.map((product: { id: Key | null | undefined; slug: string | undefined; image: string | undefined; name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | null | undefined; price: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined }) => (

@@ -1,15 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import Head from 'next/head'
 import NextLink from 'next/link'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { products } from '../../untils/data'
 import Layout from '../../components/Layout'
-import { AppBar, Button, Container, createMuiTheme, Grid, Link, List, ListItem, Toolbar, Typography, Card, Slider, ThemeProvider, CssBaseline, Input, IconButton } from '@mui/material'
+import { Button, Grid, Link, List, ListItem, Toolbar, Typography, Card } from '@mui/material'
 import styles from "../../styles/Amazon.module.scss"
-import { PhotoCamera } from '@mui/icons-material'
-
+import Image from 'next/image'
 
 export default function ProductDetail() {
   const router = useRouter();
@@ -18,13 +14,9 @@ export default function ProductDetail() {
   if (!product) {
     return <div>Product not found</div>
   }
-  const style = theme => ({
-    disabledButton: {
-      backgroundColor: theme.palette.primary || 'red'
-    }
-  });
   return (
-    <Layout title={product.name} description={product.description}>
+    // <Layout title={product.name} description={product.description}>
+    <Layout>
       <div className={styles.page_product_detail}>
         <Toolbar className={styles.detail_breadcrumb}>
           <NextLink href='/' passHref className='breadcrumb_link'>
@@ -107,10 +99,7 @@ export default function ProductDetail() {
                   </Grid>
                 </ListItem>
                 <ListItem>
-                  <Button variant="contained" color="primary"
-                    // disabled
-                    classes={{ disabled: style.disabledButton }}
-                  >
+                  <Button variant="contained" color="primary">
                     {product.countInStock > 0 ? ' Add to card' : 'Unavailable'}
                   </Button>
                 </ListItem>

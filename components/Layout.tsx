@@ -1,19 +1,21 @@
-import { NextPage } from 'next'
-import React, { useContext } from 'react'
-import Head from 'next/head'
+import React, { ReactNode } from "react";
 import NextLink from 'next/link'
-import { AppBar, Button, Container, CssBaseline, Link, ThemeProvider, Toolbar, Typography } from '@mui/material'
-import styles from "../styles/Amazon.module.scss";
-
-export default function Layout({ title, description, children }) {
+import { AppBar, Container, Link, Toolbar, Typography } from '@mui/material'
+import styles from "../styles/Amazon.module.scss"
+interface Props {
+    children?: ReactNode
+}
+// export default function Layout({ title, description, children }: Props) {
+export default function Layout({ children }: Props) {
+    // export default function Layout() {
     return (
         <div>
-            <Head>
+            {/* <Head>
                 <title>{title ? `Next Amazona / ${title}` : `Next Amazona`}</title>
                 {description && <meta name='description' content={description}></meta>}
-            </Head>
-            <AppBar position="static" className={styles.navbar}>
+            </Head> */}
 
+            <AppBar position="static" className={styles.navbar}>
                 <Toolbar className={styles.container}>
                     <NextLink href='/' passHref>
                         <Link className={styles.link_brand}>
