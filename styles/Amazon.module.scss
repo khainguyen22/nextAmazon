@@ -1,0 +1,109 @@
+header.navbar {
+    background-color: #203040;
+    min-height: 5vh;
+    height: auto;
+
+    .container {
+        & * {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .link_brand {
+            .brand {
+                font-size: 2em;
+            }
+        }
+
+        .grow {
+            flex-grow: 1;
+        }
+
+        .link_card,
+        .link_login {
+
+            .card,
+            .login {
+                font-size: 1em;
+            }
+
+
+        }
+    }
+}
+
+.main {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    min-height: 85vh;
+
+    .product_container {
+        .container {
+            .product_grid {
+                .product_card {
+                    height: 100%;
+                    position: relative;
+
+                    .product_content {
+                        min-height: 100px;
+
+                        .content_name {
+                            min-height: 70px;
+                            overflow: hidden;
+                            height: 70px;
+                        }
+                    }
+
+                    .product_add_to_card {
+                        padding:
+                            16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .page_product_detail {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .detail_breadcrumb {
+            padding: 0;
+
+            a {
+                text-decoration: none;
+                margin-right: 4px;
+            }
+        }
+    }
+}
+
+
+.footer {
+    background-color: #203040;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    margin: auto auto;
+    min-height: 5vh;
+    height: auto;
+
+    a {
+        margin: 0 4px;
+        color: rgb(199, 199, 199);
+        text-decoration: none;
+
+        &:hover {
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
