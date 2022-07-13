@@ -32,9 +32,7 @@ const Home: NextPage = () => {
           {slideImages.map((slideImage, index) => (
             <Card className="each-slide" key={index}>
               <CardContent style={{ 'backgroundImage': `url(${slideImage.url})` }}>
-                {/* <CardContent> */}
                 <Image src={slideImage.url} alt="a" width={1200} height={400} layout='responsive' />
-                {/* <Typography>{slideImage.caption}</Typography> */}
               </CardContent>
             </Card>
           ))}
