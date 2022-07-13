@@ -1,9 +1,9 @@
 export const products = [
     {
         id: 0,
-        slug: '0',
+        slug: 'psum lorem iprem ipsum l0',
         name: 'Lorem ipsum lorem iprem ipsum lorem i 0',
-        category: '0',
+        category: 'm ipsum ',
         image: '/images/20.jpg',
         price: 0,
         rating: 0,

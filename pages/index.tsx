@@ -5,12 +5,40 @@ import { Key, ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } 
 import Layout from '../components/Layout'
 import { products } from '../untils/data'
 import styles from "../styles/Amazon.module.scss";
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
+import Image from 'next/image'
+
+const slideImages = [
+  {
+    url: '/slide/slide4.jpg',
+    // caption: 'Slide 1'
+  },
+  {
+    url: '/slide/slide5.jpg',
+    // caption: 'Slide 2'
+  },
+  {
+    url: '/slide/slide3.jpg',
+    // caption: 'Slide 3'
+  }
+];
 
 const Home: NextPage = () => {
   return (
     <div>
-      {/* <Layout title="Home" description=""> */}
       <Layout>
+        <Slide cssClass={styles.slide}>
+          {slideImages.map((slideImage, index) => (
+            <Card className="each-slide" key={index}>
+              <CardContent style={{ 'backgroundImage': `url(${slideImage.url})` }}>
+                {/* <CardContent> */}
+                <Image src={slideImage.url} alt="a" width={1200} height={400} layout='responsive' />
+                {/* <Typography>{slideImage.caption}</Typography> */}
+              </CardContent>
+            </Card>
+          ))}
+        </Slide>
         <div className={styles.product_container}>
           <Grid container spacing={3} className={styles.container}>
             {products.map((product: { id: Key | null | undefined; slug: string | undefined; image: string | undefined; name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | null | undefined; price: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined }) => (

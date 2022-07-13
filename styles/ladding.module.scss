@@ -1,0 +1,168 @@
+.backgound {
+    background: url('/../assets/bg.png');
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.texture {
+    background: url('/../assets/texture.png');
+    height: 100vh;
+    width: 100%;
+    opacity: 0.3;
+    position: fixed;
+    z-index: -1;
+}
+
+.header {
+    .ladding_page_header {
+        padding: 100px 0;
+        height: 100vh;
+
+        .row {
+
+            .col {
+                margin: auto auto;
+                display: flex;
+
+                img {
+                    width: 60%;
+                }
+                .img1 {
+                    position: absolute;
+                    left: 7%;
+                    top: 20%;
+                    z-index: -1;
+                }
+                .card {
+                    // background-color: #fdf6eb9c;
+                    // box-shadow: 0px 0px 0px 2px #dedede33;
+                    background: unset;
+                    border: unset;
+                    margin: 0 0 0 auto;
+                    max-width: 600px;
+                    display: block;
+                    padding: 20px;
+
+                    .btn_start {
+                        border: unset;
+                        padding: 6px 12px;
+                        border-radius: 8px;
+                        background: #f8cf7c;
+                        border: 1px solid #facc6f;
+                        color: #000000;
+
+                        &:hover {
+                            background: #f8ba3e;
+                        }
+
+                        &:focus,
+                        &:focus-visible {
+                            border: 1px solid #f2b948;
+                            box-shadow: unset;
+                            outline: unset;
+                            background-color: unset;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.main {
+    // background-image: linear-gradient(#fff, #e9dcdc);
+
+    .ladding_page_sevice {
+        padding: 100px 0;
+
+        .row {
+            .col {
+                .card {
+                    background-color: unset;
+                    border: unset;
+                    margin: 0 0 0 auto;
+                    display: block;
+                    padding: 20px;
+
+                    img {
+                        width: 50%;
+                        display: flex;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .ladding_page_about {
+        padding: 100px 0;
+
+        .row {
+            .col {
+                img {
+                    width: 80%;
+                    display: flex;
+                    margin: auto;
+                }
+
+                .card {
+                    background: unset;
+                    border: unset;
+                    max-width: 600px;
+                    display: block;
+                    padding: 20px;
+
+
+                    .btn_start {
+                        border: unset;
+                        padding: 6px 12px;
+                        border-radius: 8px;
+                        background: #f8cf7c;
+                        border: 1px solid #facc6f;
+                        color: #000000;
+
+                        &:hover {
+                            background: #f8ba3e;
+                        }
+
+                        &:focus,
+                        &:focus-visible {
+                            border: 1px solid #f2b948;
+                            box-shadow: unset;
+                            outline: unset;
+                            background-color: unset;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .ladding_page_download {
+        padding: 100px 0;
+        text-align: center;
+
+        .download_app {
+            display: flex;
+            justify-content: center;
+
+            .img_fluid {
+                width: 200px;
+                height: 100px;
+                margin: 20px;
+            }
+        }
+
+    }
+}
+.footer {
+    padding: 50px 0;
+    background-color: #facc70;
+    ul {
+        padding: unset;
+    }
+}

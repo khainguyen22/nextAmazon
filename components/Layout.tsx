@@ -1,20 +1,17 @@
 import React, { ReactNode } from "react";
 import NextLink from 'next/link'
-import { AppBar, Container, Link, Toolbar, Typography } from '@mui/material'
+import { AppBar, Container, Link, Toolbar, Grid, Typography } from '@mui/material'
 import styles from "../styles/Amazon.module.scss"
+import Head from "next/head";
 interface Props {
     children?: ReactNode
 }
-// export default function Layout({ title, description, children }: Props) {
 export default function Layout({ children }: Props) {
-    // export default function Layout() {
     return (
         <div>
-            {/* <Head>
-                <title>{title ? `Next Amazona / ${title}` : `Next Amazona`}</title>
-                {description && <meta name='description' content={description}></meta>}
-            </Head> */}
-
+            <Head>
+                <title>Next Amazona / Home</title>
+            </Head>
             <AppBar position="static" className={styles.navbar}>
                 <Toolbar className={styles.container}>
                     <NextLink href='/' passHref>
@@ -23,12 +20,40 @@ export default function Layout({ children }: Props) {
                         </Link>
                     </NextLink>
                     <div className={styles.grow}></div>
-                    <NextLink href='/card' passHref>
+                    <>
+                        <NextLink href='/' passHref>
+                            <Link>
+                                <Typography>Home</Typography>
+                            </Link>
+                        </NextLink>
+                        <NextLink href='/' passHref>
+                            <Link>
+                                <Typography>Products</Typography>
+                            </Link>
+                        </NextLink>
+                        <NextLink href='/' passHref>
+                            <Link>
+                                <Typography>Category</Typography>
+                            </Link>
+                        </NextLink>
+                        <NextLink href='/' passHref>
+                            <Link>
+                                <Typography>Blog</Typography>
+                            </Link>
+                        </NextLink>
+                        <NextLink href='/' passHref>
+                            <Link>
+                                <Typography>Contact Us</Typography>
+                            </Link>
+                        </NextLink>
+                    </>
+                    <div className={styles.grow}></div>
+                    <NextLink href='/card/mycard' passHref>
                         <Link className={styles.link_card}>
                             <Typography className={styles.card}>Card</Typography>
                         </Link>
                     </NextLink>
-                    <NextLink href='/login' passHref>
+                    <NextLink href='/account/login' passHref>
                         <Link className={styles.link_login}>
                             <Typography className={styles.login}>Login</Typography>
                         </Link>
@@ -40,9 +65,23 @@ export default function Layout({ children }: Props) {
             </Container>
             <footer className={styles.footer}>
                 <Container>
-                    ddd
+                    <Grid container spacing={1}>
+                        <Grid item md={6} xs={12}>
+                            <NextLink href='/' passHref>
+                                <Link>
+                                    <Typography component="h4" variant='h4'>Amazon</Typography>
+                                </Link>
+                            </NextLink>
+                        </Grid>
+                        <Grid item md={3} xs={12}>
+                            2
+                        </Grid>
+                        <Grid item md={3} xs={12}>
+                            3
+                        </Grid>
+                    </Grid>
                 </Container>
-                <Typography>
+                <Typography className={styles.footer_copyright} >
                     @ All rights reserved.
                     <NextLink href="/">
                         <Link>

@@ -4,15 +4,22 @@ header.navbar {
     height: auto;
 
     .container {
+        max-width: 1224px;
+        margin: 0 auto;
+        width: 100%;
+
         & * {
-            color: #fff;
             text-decoration: none;
             font-weight: bold;
         }
 
         a {
+            margin: 0 12px;
+            color: #fff;
+
             &:hover {
                 cursor: pointer;
+                color: #73a9df !important;
             }
         }
 
@@ -33,16 +40,29 @@ header.navbar {
             .login {
                 font-size: 1em;
             }
-
-
         }
     }
 }
 
 .main {
-    margin-top: 24px;
+    // margin-top: 24px;
     margin-bottom: 24px;
     min-height: 85vh;
+
+    .slide {
+        margin-bottom: 24px;
+
+        & * {
+            height: 350px;
+            padding: 0;
+        }
+
+        img {
+            border-radius: 0;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
 
     .product_container {
         .container {
@@ -86,24 +106,26 @@ header.navbar {
     }
 }
 
-
 .footer {
     background-color: #203040;
     color: #fff;
     padding: 12px;
-    text-align: center;
-    margin: auto auto;
     min-height: 5vh;
     height: auto;
 
-    a {
-        margin: 0 4px;
-        color: rgb(199, 199, 199);
-        text-decoration: none;
+    .footer_copyright {
+        text-align: center;
+        margin: auto auto;
 
-        &:hover {
-            color: #fff;
-            cursor: pointer;
+        a {
+            margin: 0 4px;
+            color: rgb(199, 199, 199);
+            text-decoration: none;
+
+            &:hover {
+                color: #fff;
+                cursor: pointer;
+            }
         }
     }
 }
