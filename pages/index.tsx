@@ -8,26 +8,23 @@ import styles from "../styles/Amazon.module.scss";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import Image from 'next/image'
-
+export const config = { amp: false }
 const slideImages = [
   {
-    url: '/slide/slide4.jpg',
-    // caption: 'Slide 1'
+    url: '/slide/slide4.jpg'
   },
   {
-    url: '/slide/slide5.jpg',
-    // caption: 'Slide 2'
+    url: '/slide/slide5.jpg'
   },
   {
-    url: '/slide/slide3.jpg',
-    // caption: 'Slide 3'
+    url: '/slide/slide3.jpg'
   }
 ];
 
 const Home: NextPage = () => {
   return (
     <div>
-      <Layout>
+      <Layout title="Home">
         <Slide cssClass={styles.slide}>
           {slideImages.map((slideImage, index) => (
             <Card className="each-slide" key={index}>

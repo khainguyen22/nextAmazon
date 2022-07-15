@@ -1,4 +1,4 @@
-import Head from 'next/head'
+
 import React from 'react'
 import Layout from '../../components/Layout'
 
@@ -33,10 +33,7 @@ import Layout from '../../components/Layout'
 // ];
 const Index = () => {
     return (
-        <Layout>
-            <Head>
-                <title>Demo test</title>
-            </Head>
+        <Layout title="test">
             {/* //              <Zoom scale={0.4}>
 //                 { 
 //                     images.map((each, index) => <Image key={index} style={{ width: "100%" }} src={each} />)

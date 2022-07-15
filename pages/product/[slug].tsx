@@ -6,7 +6,6 @@ import Layout from '../../components/Layout'
 import { Button, Grid, Link, List, ListItem, Toolbar, Typography, Card } from '@mui/material'
 import styles from "../../styles/Amazon.module.scss"
 import Image from 'next/image'
-import Head from 'next/head'
 export default function ProductDetail() {
   const router = useRouter();
   const { slug } = router.query;
@@ -15,10 +14,7 @@ export default function ProductDetail() {
     return <div>Product not found</div>
   }
   return (
-    <Layout>
-      <Head>
-        <title>Next Amazona / {product.name}</title>
-      </Head>
+    <Layout title={product.name}>
       <div className={styles.page_product_detail}>
         <Toolbar className={styles.detail_breadcrumb}>
           <NextLink href='/' passHref className='breadcrumb_link'>

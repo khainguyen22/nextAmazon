@@ -5,12 +5,13 @@ import styles from "../styles/Amazon.module.scss"
 import Head from "next/head";
 interface Props {
     children?: ReactNode
+    title?: ReactNode
 }
-export default function Layout({ children }: Props) {
+export default function Layout({ children, title }: Props) {
     return (
         <div>
             <Head>
-                <title>Next Amazona / Home</title>
+                <title>Next Amazona {title ? `/ ${title}` : ''}</title>
             </Head>
             <AppBar position="static" className={styles.navbar}>
                 <Toolbar className={styles.container}>

@@ -5,10 +5,8 @@ import Layout from '../../../components/Layout'
 
 const Index = () => {
     return (
-        <Layout>
-            <Head>
-                <title>My Login</title>
-            </Head>
+        <Layout title="My Login">
+            My Login
         </Layout>
     )
 }
