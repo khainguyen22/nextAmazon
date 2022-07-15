@@ -1,5 +1,3 @@
-import { log } from 'console';
-import { GetServerSideProps } from 'next';
 import React from 'react'
 const Test = () => {
     return (
