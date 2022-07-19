@@ -8,7 +8,6 @@ import styles from "../styles/Amazon.module.scss";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import Image from 'next/image'
-export const config = { amp: false }
 const slideImages = [
   {
     url: '/slide/slide4.jpg'

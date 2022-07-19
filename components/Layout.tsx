@@ -27,9 +27,9 @@ export default function Layout({ children, title }: Props) {
                                 <Typography>Home</Typography>
                             </Link>
                         </NextLink>
-                        <NextLink href='/' passHref>
+                        <NextLink href='/post' passHref>
                             <Link>
-                                <Typography>Products</Typography>
+                                <Typography>Posts</Typography>
                             </Link>
                         </NextLink>
                         <NextLink href='/' passHref>
