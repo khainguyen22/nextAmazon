@@ -1,17 +1,5 @@
 export const products = [
-    {
-        id: 0,
-        slug: 'psum lorem iprem ipsum l0',
-        name: 'Lorem ipsum lorem iprem ipsum lorem i 0',
-        category: 'm ipsum ',
-        image: '/images/20.jpg',
-        price: 0,
-        rating: 0,
-        numReview: 0,
-        countInStock: 0,
-        brand: '0',
-        description: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 1"
-    },
+
     {
         id: 1,
         slug: '1',
@@ -21,7 +9,7 @@ export const products = [
         price: 1,
         rating: 1,
         numReview: 1,
-        countInStock: 1,
+        countInStock: 0,
         brand: '1',
         description: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 1"
     },
@@ -86,7 +74,7 @@ export const products = [
         price: 6,
         rating: 6,
         numReview: 6,
-        countInStock: 6,
+        countInStock: 0,
         brand: '6',
         description: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 6"
     },
