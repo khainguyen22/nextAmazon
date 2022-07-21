@@ -64,14 +64,14 @@ header.navbar {
         }
     }
 
-    .product_container {
+    .post_container {
         .container {
-            .product_grid {
-                .product_card {
+            .post_grid {
+                .post_card {
                     height: 100%;
                     position: relative;
 
-                    .product_content {
+                    .post_content {
                         min-height: 100px;
 
                         .content_name {
@@ -81,7 +81,7 @@ header.navbar {
                         }
                     }
 
-                    .product_add_to_card {
+                    .post_add_to_card {
                         padding:
                             16px;
                     }
@@ -90,13 +90,13 @@ header.navbar {
         }
     }
 
-    .page_product_detail {
+    .page_post_detail {
         width: 100%;
         padding-top: 20px;
         padding-bottom: 20px;
 
         .detail_breadcrumb {
-            padding: 0;
+            padding: 0 !important;
 
             a {
                 text-decoration: none;

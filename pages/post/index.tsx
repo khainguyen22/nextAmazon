@@ -29,25 +29,25 @@ const Index = ({ posts }: { posts: any }) => {
                     </Card>
                 ))}
             </Slide>
-            <div className={styles.product_container}>
+            <div className={styles.post_container}>
                 <Grid container spacing={3} className={styles.container}>
-                    {posts.map((product: { id: any; attributes: { image: { data: { attributes: { url: any; }; }[]; }; name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; price: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }; }, i: React.Key | null | undefined) => (
-                        <Grid item md={3} key={i} className={styles.product_grid}>
-                            <Card className={styles.product_card}>
-                                <NextLink href={`/post/${product.id}`} passHref>
+                    {posts.map((post: { id: any; attributes: { image: { data: { attributes: { url: any; }; }[]; }; name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; price: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }; }, i: React.Key | null | undefined) => (
+                        <Grid item md={3} key={i} className={styles.post_grid}>
+                            <Card className={styles.post_card}>
+                                <NextLink href={`/post/${post.id}`} passHref>
                                     <CardActionArea>
-                                        <CardMedia component="img" image={`http://localhost:1337${product.attributes.image.data[0].attributes.url}`}></CardMedia>
-                                        <CardContent className={styles.product_content}>
+                                        <CardMedia component="img" image={`http://localhost:1337${post.attributes.image.data[0].attributes.url}`}></CardMedia>
+                                        <CardContent className={styles.post_content}>
                                             <Typography component='h6' variant='h6' className={styles.content_name}>
-                                                {product.attributes.name}
+                                                {post.attributes.name}
                                             </Typography>
                                             <Typography>
-                                                ${product.attributes.price}
+                                                ${post.attributes.price}
                                             </Typography>
                                         </CardContent>
                                     </CardActionArea>
                                 </NextLink>
-                                <CardActions className={styles.product_add_to_card}>
+                                <CardActions className={styles.post_add_to_card}>
                                     <Button size='small' color='primary' variant="contained">
                                         <Typography>Add to card</Typography>
                                     </Button>
@@ -63,24 +63,28 @@ const Index = ({ posts }: { posts: any }) => {
 export const getStaticProps = async () => {
     try {
         const res = await fetch('http://localhost:1337/api/products?populate=*')
-        const data = await res.json()
-        const posts = data.data
+        const dataPosts = await res.json()
+        const posts = dataPosts.data
         if (posts) {
             return {
                 props: {
-                    post: posts,
+                    posts: posts,
                 }
             }
         }
         else {
             return {
                 props: {
-                    posts: "",
+                    posts: '',
                 }
             }
         }
-    } catch (error) {
-        return { notFound: true };
+    } catch {
+        return {
+            redirect: {
+                destination: "/404",
+            },
+        }
     }
 }
 export default Index

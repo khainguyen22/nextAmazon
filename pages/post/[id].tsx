@@ -6,7 +6,7 @@ import styles from "../../styles/Amazon.module.scss"
 
 const Detail = ({ post }: { post: any }) => {
     return (
-        <Layout title={post.attributes.name}>
+        <Layout title="ID">
             <div className={styles.page_product_detail}>
                 <Toolbar className={styles.detail_breadcrumb}>
                     <NextLink href='/' passHref className='breadcrumb_link'>
@@ -124,8 +124,8 @@ export async function getStaticProps(context: { params: any }) {
     try {
         const { params } = context
         const res = await fetch(`http://localhost:1337/api/products/${params.id}?populate=*/`)
-        const data = await res.json()
-        const posts = data.data
+        const dataPost = await res.json()
+        const posts = dataPost.data
         if (posts) {
             return {
                 props: {
@@ -133,14 +133,11 @@ export async function getStaticProps(context: { params: any }) {
                 }
             }
         }
-        else {
-            return {
-                props: {
-                    posts: "",
-                }
-            }
+    } catch {
+        return {
+            redirect: {
+                destination: "/404",
+            },
         }
-    } catch (error) {
-        return { notFound: true };
     }
 }
